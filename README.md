@@ -11,17 +11,17 @@ Group Project - README Template
 
 ## Overview
 ### Description
-SEA Lifestyle tackles issues of overeating, and obesity by helping the user maintain a healthy lifestyle. This app allows the user get nutritional facts on the food they consume. The user would also be able to view previous meals, view the ingredients and cook a meal.
+SEA Lifestyle tackles issues of overeating, and obesity by helping the user maintain a healthy lifestyle. This app allows the user get nutritional facts on the food they consume. The user would also be able to view previous meals, view the ingredients, and cook a meal.
 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Health/Social
+- **Mobile:** This app is made to function on mobile platforms so that users can easily access its features. However, it could be modified for a computer. The same components would still be available on a web platform, however, the mobile version would have the most up to date features. 
+- **Story:** Allows users to view nutritional facts about foods to encourage them to make better health choices. The user can also cook a meal, and like a food. The social component of the app is being able to see the food people like the most.
+- **Market:** Any individual could choose to use this app. However, the age group we are targeting ranges from ages 12 to 25. We want to promote a healthy lifestyle amongst the youth and young adult age groups so that they can maintain it as they age.
+- **Habit:** This can be used based on the user's health goals. If a user is trying to improve their eating lifestyle, they might use the app everyday. If the user is more interested in the cooking feature of the app, they could use the app once a week.
+- **Scope:** First, users would be able to type in foods and get information about the food and also a recipe for preparing the food. However, this app could evolve and become convenient for users. Users could take pictures of their home cooked meals, or foods at restaurants and receive real time data about the nutritional facts of the food.
 
 ## Product Spec
 
@@ -136,13 +136,14 @@ SEA Lifestyle tackles issues of overeating, and obesity by helping the user main
 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]![](https://i.imgur.com/CDmAHEm.jpg)
+![](https://i.imgur.com/CDmAHEm.jpg)
 
 
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
-This is the link to our prototype: https://www.figma.com/file/Xys8tWlwc3fL8NnvPDgkRB/SEALifestyle?node-id=0%3A1
+This is the link to our prototype: 
+https://www.figma.com/file/Xys8tWlwc3fL8NnvPDgkRB/SEALifestyle?node-id=0%3A1
 
 ### [BONUS] Interactive Prototype
 Our prototype is also interactive. Please click the link: https://www.figma.com/file/Xys8tWlwc3fL8NnvPDgkRB/SEALifestyle?node-id=0%3A1

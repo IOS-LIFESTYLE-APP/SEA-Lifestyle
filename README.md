@@ -1,6 +1,3 @@
-Group Project - README Template
-===
-
 # SEA LIFESTYLE
 
 ## Table of Contents

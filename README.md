@@ -136,7 +136,9 @@ SEA Lifestyle tackles issues of overeating, and obesity by helping the user main
 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
+[Add picture of your hand sketched wireframes in this section]![](https://i.imgur.com/CDmAHEm.jpg)
+
+
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups

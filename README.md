@@ -54,6 +54,7 @@ SEA Lifestyle tackles issues of overeating, and obesity by helping the user main
 * User can put in location to see healthy food restaurants near them.
 * User can see how many calories per food item
 * User has a calorie tracker to see how many calories consumed per day
+* User can generate a meal plan
  
 
 ### 2. Screen Archetypes
@@ -148,8 +149,83 @@ Our prototype is also interactive. Please click the link: https://www.figma.com/
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+| Property | Type | Description |
+| -------- | -------- | -------- |
+| Username    | String     | Text that stores the name of the user     |
+| Number of likes    | Number   | Stores the number of people that like a meal     |
+| Image    | File | Image of selected food    |
+
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+* Home/Search Screen
+    (create/POST) Searching food items
+    * (Read/Get) Previous searches
+    * (Delete) Delete existing likes
+    * (Create/POST) New liked items
+* Search Result Screen
+    * (Read/Get) food items 
+    * (Read/Get) ingredients on meals
+        
+* Nutritional Facts Screen
+    * (Read/Get) Nutritional facts on food items
+* Cooking Screen
+    * (Read/Get) instructions on how to prepare meal
+
+
+* Saving liked cooks with Parse
+    * let foodScore = PFObject(className:"FoodScore")
+    * foodScore["name"] = food_name
+    * foodScore["author"] = PFUser.current!
+    * foodScore.saveInBackground { (succeeded, error)  in
+    if (succeeded) {
+        // The object has been saved.
+    } else {
+        // There was a problem, check error.description
+    }}
+    
+* Quering liked cooks with Parse
+    * let query = PFQuery(className: "FoodScore")
+    * query.includeKey("name")
+    * query.limit = 20
+    * query.findObjectsInBackground{ (posts, error) in
+     if posts != nil {
+                self.posts = posts!
+                self.tableView.reloadData()
+            }}
+    
+* Getting request to Spoontacular api
+    * let url = URL(string: "https://api.spoonacular.com/recipes/search&apiKey=a5adb8848cf447679fcce3994122a14f")!
+    * let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+    * let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+    * let task = session.dataTask(with: request) { (data, response, error) in
+ 
+    * if let error = error {
+      print(error.localizedDescription)
+   } else if let data = data {
+      let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+   }
+}
+task.resume()
+    
+    
+    
+
+
+* Spoontacular API
+    * Base URL: https://api.spoonacular.com
+
+| HTTP Verb | Endpoint | Description |
+| -------- | -------- | -------- |
+|GET    | /food/menuItems/search   | Get Search Menu Items     |
+| GET    | /recipes/search  | Search for food recipes    |
+| GET   | recipes/findByIngredients | Search for recipes by ingredients    |
+| GET   | /recipes/{id}/nutritionWidget.json| Get a recipe's nutrition widget data.    |
+| GET   | /recipes/guessNutrition| Estimate the macronutrients of a dish based on its title.    |
+| GET   | /mealplanner/generate| Generate a meal plan with three meals per day (breakfast, lunch, and dinner).    |
+
+
+
+    
+    

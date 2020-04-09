@@ -52,6 +52,21 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hdb-fW-O6L">
+            <objects>
+                <viewController id="uTA-xd-AFm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6BR-Qi-rcJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cJX-ca-7bc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nw8-bo-sQt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077" y="139"/>
+        </scene>
     </scenes>
     <resources>
         <image name="iPhone 11 Pro Max - 8" width="414" height="896"/>

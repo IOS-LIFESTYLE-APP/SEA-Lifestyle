@@ -169,10 +169,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black and White Coffee House Cafe Logo (6) 1" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-hw-0YC">
-                                <rect key="frame" x="80" y="78" width="254" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WELCOME" translatesAutoresizingMaskIntoConstraints="NO" id="SJm-fS-w4c">
                                 <rect key="frame" x="87" y="251" width="240" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -221,6 +217,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black and White Coffee House Cafe Logo (6) 1" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-hw-0YC">
+                                <rect key="frame" x="80" y="88" width="254" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -233,7 +233,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="6rg-qc-X4i"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="appLogo" destination="o7N-hw-0YC" id="1O6-Fr-bdF"/>
                         <outlet property="collectionView" destination="MgL-AZ-gfw" id="q8j-Mi-oG2"/>
+                        <outlet property="greetingLabel" destination="WRg-FP-zXm" id="oik-Ei-CGG"/>
+                        <outlet property="searchBar" destination="EEc-qP-uLM" id="Eo1-bZ-PRm"/>
+                        <outlet property="welcomePoster" destination="SJm-fS-w4c" id="toB-TE-rLK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2o-Ek-Xsi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

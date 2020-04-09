@@ -8,10 +8,14 @@
 
 import UIKit
 
-class MealGridViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MealGridViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
     
-
+    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var appLogo: UIImageView!
+    @IBOutlet var welcomePoster: UIImageView!
+    @IBOutlet var greetingLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -23,11 +27,47 @@ class MealGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         let width = (view.frame.size.width - layout.minimumInteritemSpacing) / 2
         layout.itemSize = CGSize(width: width, height: width * 3 / 4)
+        
+        searchBar.delegate = self
     }
     
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
     }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.searchBar.frame = CGRect(x: self.searchBar.frame.origin.x,
+                                          y: self.searchBar.frame.origin.y - 400,
+                                          width: self.searchBar.frame.size.width,
+                                          height: self.searchBar.frame.size.height)
+         
+         self.collectionView.frame = CGRect(x: self.collectionView.frame.origin.x,
+                                            y: self.collectionView.frame.origin.y - 400,
+                                            width: self.collectionView.frame.size.width, height: self.collectionView.frame.size.height + 300)
+            self.appLogo.alpha = 0
+            self.welcomePoster.alpha = 0
+            self.greetingLabel.alpha = 0
+        })
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        var newFrame: CGRect = self.searchBar.frame
+        newFrame.origin.y += 400
+        var viewFrame: CGRect = self.collectionView.frame
+        viewFrame.origin.y += 400
+        viewFrame.size.height -= 300
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.searchBar.frame = newFrame
+            self.collectionView.frame = viewFrame
+            
+            self.appLogo.alpha = 1
+            self.welcomePoster.alpha = 1
+            self.greetingLabel.alpha = 1
+        })
+    }
+           
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 20
     }
@@ -38,7 +78,6 @@ class MealGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         return cell
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -48,5 +87,5 @@ class MealGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

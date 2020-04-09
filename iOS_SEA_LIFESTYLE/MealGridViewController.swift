@@ -32,6 +32,11 @@ class MealGridViewController: UIViewController, UICollectionViewDelegate, UIColl
        
     }
     
+    
+    @IBAction func logOut(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func swipeRecognizer(_ sender: Any) {
         view.endEditing(true)
     }

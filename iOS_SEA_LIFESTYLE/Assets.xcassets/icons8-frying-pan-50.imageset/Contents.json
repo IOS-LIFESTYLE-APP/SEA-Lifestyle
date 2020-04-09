@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "icons8-frying-pan-50.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "WELCOME.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

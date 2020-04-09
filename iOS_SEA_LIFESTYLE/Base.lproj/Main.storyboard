@@ -229,7 +229,9 @@
                             <outletCollection property="gestureRecognizers" destination="Zm3-5a-jhf" appends="YES" id="7up-Qd-lOF"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="9rt-Cn-S1i"/>
+                    <navigationItem key="navigationItem" id="9rt-Cn-S1i">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="6rg-qc-X4i"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="MgL-AZ-gfw" id="q8j-Mi-oG2"/>
                     </connections>

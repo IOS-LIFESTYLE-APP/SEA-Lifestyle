@@ -29,11 +29,13 @@ class MealGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         layout.itemSize = CGSize(width: width, height: width * 3 / 4)
         
         searchBar.delegate = self
+       
     }
     
-    @IBAction func onTap(_ sender: Any) {
+    @IBAction func swipeRecognizer(_ sender: Any) {
         view.endEditing(true)
     }
+    
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         UIView.animate(withDuration: 0.2, animations: {

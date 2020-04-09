@@ -226,7 +226,7 @@
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="QRX-va-HO0"/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="Zm3-5a-jhf" appends="YES" id="7up-Qd-lOF"/>
+                            <outletCollection property="gestureRecognizers" destination="6gt-dr-1MU" appends="YES" id="7lH-Ih-Oqy"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="9rt-Cn-S1i">
@@ -241,11 +241,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2o-Ek-Xsi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Zm3-5a-jhf">
+                <swipeGestureRecognizer direction="down" id="6gt-dr-1MU">
                     <connections>
-                        <action selector="onTap:" destination="8kc-A2-aVV" id="WoH-FR-lHp"/>
+                        <action selector="swipeRecognizer:" destination="8kc-A2-aVV" id="h73-GA-Dqy"/>
                     </connections>
-                </tapGestureRecognizer>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-991" y="1791"/>
         </scene>

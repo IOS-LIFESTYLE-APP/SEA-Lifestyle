@@ -15,6 +15,10 @@
 		3B7D65F0243EE38D0060F939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7D65EE243EE38D0060F939 /* LaunchScreen.storyboard */; };
 		3B7D65FB243EE38E0060F939 /* iOS_SEA_LIFESTYLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D65FA243EE38E0060F939 /* iOS_SEA_LIFESTYLETests.swift */; };
 		3B7D6606243EE38E0060F939 /* iOS_SEA_LIFESTYLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D6605243EE38E0060F939 /* iOS_SEA_LIFESTYLEUITests.swift */; };
+		83BB61B8243EF6FD00768062 /* PopularMealsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB61B7243EF6FD00768062 /* PopularMealsCell.swift */; };
+		83BB61BA243EFA4700768062 /* PopularMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB61B9243EFA4700768062 /* PopularMealsViewController.swift */; };
+		83BB61BC243F0BDB00768062 /* MealGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB61BB243F0BDB00768062 /* MealGridCell.swift */; };
+		83BB61BE243F0E6300768062 /* MealGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB61BD243F0E6300768062 /* MealGridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		3B7D6601243EE38E0060F939 /* iOS_SEA_LIFESTYLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_SEA_LIFESTYLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7D6605243EE38E0060F939 /* iOS_SEA_LIFESTYLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_SEA_LIFESTYLEUITests.swift; sourceTree = "<group>"; };
 		3B7D6607243EE38E0060F939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83BB61B7243EF6FD00768062 /* PopularMealsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMealsCell.swift; sourceTree = "<group>"; };
+		83BB61B9243EFA4700768062 /* PopularMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMealsViewController.swift; sourceTree = "<group>"; };
+		83BB61BB243F0BDB00768062 /* MealGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealGridCell.swift; sourceTree = "<group>"; };
+		83BB61BD243F0E6300768062 /* MealGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealGridViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				3B7D65EC243EE38D0060F939 /* Assets.xcassets */,
 				3B7D65EE243EE38D0060F939 /* LaunchScreen.storyboard */,
 				3B7D65F1243EE38D0060F939 /* Info.plist */,
+				83BB61B7243EF6FD00768062 /* PopularMealsCell.swift */,
+				83BB61B9243EFA4700768062 /* PopularMealsViewController.swift */,
+				83BB61BB243F0BDB00768062 /* MealGridCell.swift */,
+				83BB61BD243F0E6300768062 /* MealGridViewController.swift */,
 			);
 			path = iOS_SEA_LIFESTYLE;
 			sourceTree = "<group>";
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83BB61BA243EFA4700768062 /* PopularMealsViewController.swift in Sources */,
 				3B7D65E8243EE38C0060F939 /* ViewController.swift in Sources */,
+				83BB61BC243F0BDB00768062 /* MealGridCell.swift in Sources */,
 				3B7D65E4243EE38C0060F939 /* AppDelegate.swift in Sources */,
+				83BB61BE243F0E6300768062 /* MealGridViewController.swift in Sources */,
+				83BB61B8243EF6FD00768062 /* PopularMealsCell.swift in Sources */,
 				3B7D65E6243EE38C0060F939 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

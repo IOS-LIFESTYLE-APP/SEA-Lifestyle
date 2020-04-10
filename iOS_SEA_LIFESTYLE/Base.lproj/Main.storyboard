@@ -82,7 +82,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="4jm-h2-OwM"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="-699.10714285714278"/>
+            <point key="canvasLocation" x="138" y="-699"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Ojf-B5-e6P">
@@ -172,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9S-QP-eeb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1366.6666666666667" y="-699.10714285714278"/>
+            <point key="canvasLocation" x="1367" y="-699"/>
         </scene>
         <!--Popular Meals View Controller-->
         <scene sceneID="hdb-fW-O6L">
@@ -324,7 +324,7 @@
                                         <size key="customSize" width="200" height="177"/>
                                         <connections>
                                             <outlet property="mealPicture" destination="BWv-Er-hzC" id="3V5-2z-jln"/>
-                                            <segue destination="Q3G-7v-8A0" kind="presentation" modalPresentationStyle="fullScreen" id="wzw-aH-ADG"/>
+                                            <segue destination="Q3G-7v-8A0" kind="show" id="wzw-aH-ADG"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

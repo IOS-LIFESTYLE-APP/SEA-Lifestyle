@@ -229,7 +229,7 @@ task.resume()
 
 Here's a walkthrough of implemented user stories:
 
-<img src="http://g.recordit.co/aCt9KAUhyw.gif" title='Video Walkthrough' width='' alt='Video Walkthrough'/>
+<img src="http://g.recordit.co/jaaESKKQhT.gif" title='Video Walkthrough' width='' alt='Video Walkthrough'/>
 
 
 Video not displaying? Click http://g.recordit.co/aCt9KAUhyw.gif to view gif.

@@ -28,11 +28,11 @@ SEA Lifestyle tackles issues of overeating, and obesity by helping the user main
 
 - [ ] User can register for an account
 - [ ] User can log in 
-- [x]User can view SEA Lifestyle Logo
+- [x] User can view SEA Lifestyle Logo
 - [x] User can view app description
-- [ ]User can view a table of previously searched meals
-- [ ]User can see a variety of healthy food options
-- [ ]User can search foods
+- [ ] User can view a table of previously searched meals
+- [ ] User can see a variety of healthy food options
+- [ ] User can search foods
 - [x] User can click sign up button
 - [ ] User can type in a brand name
 - [x] User can click nutritional facts button
@@ -42,19 +42,19 @@ SEA Lifestyle tackles issues of overeating, and obesity by helping the user main
 - [x] User can click search results images
 - [ ] User can view number of people who searched for a meal by accessing previous searches
 - [x] User can hit "previous searches" button to see previously searched foods
-- [x]User can click cook button
-- [ ]User can view steps to cook a meal
-- [ ]User can like a meal
+- [x] User can click cook button
+- [ ] User can view steps to cook a meal
+- [ ] User can like a meal
 - [x] User can log out
 
 **Optional Nice-to-have Stories**
 
-* User can upload a picture of their meals 
-* User can see nutritional facts of food after uploading picture of food.
-* User can put in location to see healthy food restaurants near them.
-* User can see how many calories per food item
-* User has a calorie tracker to see how many calories consumed per day
-* User can generate a meal plan
+- [ ] User can upload a picture of their meals 
+- [ ] User can see nutritional facts of food after uploading picture of food.
+- [ ] User can put in location to see healthy food restaurants near them.
+- [ ] User can see how many calories per food item
+- [ ] User has a calorie tracker to see how many calories consumed per day
+- [ ] User can generate a meal plan
  
 
 ### 2. Screen Archetypes

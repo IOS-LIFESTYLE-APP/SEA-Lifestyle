@@ -225,7 +225,12 @@ task.resume()
 | GET   | /recipes/guessNutrition| Estimate the macronutrients of a dish based on its title.    |
 | GET   | /mealplanner/generate| Generate a meal plan with three meals per day (breakfast, lunch, and dinner).    |
 
+## App Walkthrough GIF
+
+Here's a walkthrough of implemented user stories:
+
+<img src="http://g.recordit.co/aCt9KAUhyw.gif" title='Video Walkthrough' width='' alt='Video Walkthrough'/>
 
 
-    
-    
+Video not displaying? Click http://g.recordit.co/aCt9KAUhyw.gif to view gif.
+

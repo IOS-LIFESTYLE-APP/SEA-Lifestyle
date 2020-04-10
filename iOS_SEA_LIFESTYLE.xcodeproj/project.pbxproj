@@ -12,6 +12,7 @@
 		3B365734243F92A200AB3BB3 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B365733243F92A200AB3BB3 /* NutritionViewController.swift */; };
 		3B365736243F92BE00AB3BB3 /* CookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B365735243F92BE00AB3BB3 /* CookViewController.swift */; };
 		3B365738243F97A500AB3BB3 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B365737243F97A500AB3BB3 /* IngredientsViewController.swift */; };
+		3B36573C2440CFB800AB3BB3 /* StartCookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B36573B2440CFB800AB3BB3 /* StartCookingViewController.swift */; };
 		3B7D65E4243EE38C0060F939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D65E3243EE38C0060F939 /* AppDelegate.swift */; };
 		3B7D65E6243EE38C0060F939 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D65E5243EE38C0060F939 /* SceneDelegate.swift */; };
 		3B7D65EB243EE38C0060F939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7D65E9243EE38C0060F939 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		3B365733243F92A200AB3BB3 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		3B365735243F92BE00AB3BB3 /* CookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookViewController.swift; sourceTree = "<group>"; };
 		3B365737243F97A500AB3BB3 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		3B36573B2440CFB800AB3BB3 /* StartCookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCookingViewController.swift; sourceTree = "<group>"; };
 		3B7D65E0243EE38C0060F939 /* iOS_SEA_LIFESTYLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_SEA_LIFESTYLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7D65E3243EE38C0060F939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7D65E5243EE38C0060F939 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				83BB61B7243EF6FD00768062 /* PopularMealsCell.swift */,
 				83BB61B9243EFA4700768062 /* PopularMealsViewController.swift */,
 				83BB61BB243F0BDB00768062 /* MealGridCell.swift */,
+				3B36573B2440CFB800AB3BB3 /* StartCookingViewController.swift */,
 				83BB61BD243F0E6300768062 /* MealGridViewController.swift */,
 			);
 			path = iOS_SEA_LIFESTYLE;
@@ -287,6 +290,7 @@
 				83BB61BC243F0BDB00768062 /* MealGridCell.swift in Sources */,
 				3B365732243F8D8300AB3BB3 /* SignUpViewController.swift in Sources */,
 				3B365734243F92A200AB3BB3 /* NutritionViewController.swift in Sources */,
+				3B36573C2440CFB800AB3BB3 /* StartCookingViewController.swift in Sources */,
 				3B7D65E4243EE38C0060F939 /* AppDelegate.swift in Sources */,
 				3B365738243F97A500AB3BB3 /* IngredientsViewController.swift in Sources */,
 				3B365730243F7E1000AB3BB3 /* LoginViewController.swift in Sources */,

@@ -26,35 +26,35 @@ SEA Lifestyle tackles issues of overeating, and obesity by helping the user main
 
 **Required Must-have Stories**
 
-* User can register for an account
-* User can log in 
-* User can view SEA Lifestyle Logo
-* User can view app description
-* User can view a table of previously searched meals
-* User can see a variety of healthy food options
-* User can search foods
-* User can click sign up button
-* User can type in a brand name
-* User can click nutritional facts button
-* User can view nutritional facts about a food type
-* User can view food ingredients
-* User can view the image of the food they searched for
-* User can click search button
-* User can view number of people who searched for a meal by accessing previous searches
-* User can hit "previous searches" button to see previously searched foods
-* User can click cook button
-* User can view steps to cook a meal
-* User can like a meal
-* User can log out
+- [ ] User can register for an account
+- [ ] User can log in 
+- [x] User can view SEA Lifestyle Logo
+- [x] User can view app description
+- [ ] User can view a table of previously searched meals
+- [ ] User can see a variety of healthy food options
+- [ ] User can search foods
+- [x] User can click sign up button
+- [ ] User can type in a brand name
+- [x] User can click nutritional facts button
+- [ ] User can view nutritional facts about a food type
+- [ ] User can view food ingredients
+- [ ] User can view the image of the food they searched for
+- [x] User can click search results images
+- [ ] User can view number of people who searched for a meal by accessing previous searches
+- [x] User can hit "previous searches" button to see previously searched foods
+- [x] User can click cook button
+- [ ] User can view steps to cook a meal
+- [ ] User can like a meal
+- [x] User can log out
 
 **Optional Nice-to-have Stories**
 
-* User can upload a picture of their meals 
-* User can see nutritional facts of food after uploading picture of food.
-* User can put in location to see healthy food restaurants near them.
-* User can see how many calories per food item
-* User has a calorie tracker to see how many calories consumed per day
-* User can generate a meal plan
+- [ ] User can upload a picture of their meals 
+- [ ] User can see nutritional facts of food after uploading picture of food.
+- [ ] User can put in location to see healthy food restaurants near them.
+- [ ] User can see how many calories per food item
+- [ ] User has a calorie tracker to see how many calories consumed per day
+- [ ] User can generate a meal plan
  
 
 ### 2. Screen Archetypes
@@ -225,7 +225,12 @@ task.resume()
 | GET   | /recipes/guessNutrition| Estimate the macronutrients of a dish based on its title.    |
 | GET   | /mealplanner/generate| Generate a meal plan with three meals per day (breakfast, lunch, and dinner).    |
 
+## App Walkthrough GIF
+
+Here's a walkthrough of implemented user stories:
+
+<img src="http://g.recordit.co/aCt9KAUhyw.gif" title='Video Walkthrough' width='' alt='Video Walkthrough'/>
 
 
-    
-    
+Video not displaying? Click http://g.recordit.co/aCt9KAUhyw.gif to view gif.
+

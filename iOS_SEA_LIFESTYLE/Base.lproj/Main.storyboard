@@ -324,7 +324,7 @@
                                         <size key="customSize" width="200" height="177"/>
                                         <connections>
                                             <outlet property="mealPicture" destination="BWv-Er-hzC" id="3V5-2z-jln"/>
-                                            <segue destination="Q3G-7v-8A0" kind="show" id="wzw-aH-ADG"/>
+                                            <segue destination="Q3G-7v-8A0" kind="presentation" modalPresentationStyle="fullScreen" id="wzw-aH-ADG"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -425,7 +425,7 @@ Course Dinner, Main CourseCuisine American, MexicanKeyword fish taco recipe, hom
             <objects>
                 <viewController id="Q3G-7v-8A0" customClass="IngredientsViewController" customModule="iOS_SEA_LIFESTYLE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6NA-UJ-EdJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="PdV-dc-EDc">
@@ -456,15 +456,7 @@ Course Dinner, Main CourseCuisine American, MexicanKeyword fish taco recipe, hom
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.99860268829999999" green="0.99575465919999995" blue="0.77251309160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
-                                    <navigationItem title="Title" id="A4Y-uP-a64">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="2v3-fG-gwt">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NpX-oV-Lsq">
-                                                <rect key="frame" x="302" y="13" width="92" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Logout"/>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Title" id="A4Y-uP-a64"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FoodName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIo-bI-Jfq">
@@ -483,7 +475,7 @@ Course Dinner, Main CourseCuisine American, MexicanKeyword fish taco recipe, hom
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ncn-3b-9FT" kind="presentation" id="Ohk-wM-p2L"/>
+                                    <segue destination="Ncn-3b-9FT" kind="presentation" modalPresentationStyle="fullScreen" id="Ohk-wM-p2L"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvz-Gq-R1H">
@@ -522,7 +514,7 @@ Optional Taco Toppings: shredded cheese shredded lettuce, chopped tomatoes, dice
             <objects>
                 <viewController id="Ncn-3b-9FT" customClass="StartCookingViewController" customModule="iOS_SEA_LIFESTYLE" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="glV-TY-bJu" colorLabel="IBBuiltInLabel-Orange">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2a-Mp-N94">
@@ -530,7 +522,7 @@ Optional Taco Toppings: shredded cheese shredded lettuce, chopped tomatoes, dice
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="Q3G-7v-8A0" kind="presentation" id="GwS-qQ-Dgo"/>
+                                    <action selector="backButton:" destination="Ncn-3b-9FT" eventType="touchUpInside" id="gQe-0I-z1K"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD4-p8-6VY">
@@ -593,7 +585,7 @@ Optional Taco Toppings: shredded cheese shredded lettuce, chopped tomatoes, dice
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzr-wy-QlS" userLabel="Start Cooking View Controller" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-100.00000000000001" y="2518.5267857142858"/>
+            <point key="canvasLocation" x="138" y="2519"/>
         </scene>
         <!--Home-->
         <scene sceneID="sIE-jL-gY3">
@@ -634,9 +626,6 @@ Optional Taco Toppings: shredded cheese shredded lettuce, chopped tomatoes, dice
             <point key="canvasLocation" x="1368" y="1063"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="GwS-qQ-Dgo"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Ellipse 1" width="379" height="364"/>
         <image name="WELCOME" width="70.5" height="12.5"/>

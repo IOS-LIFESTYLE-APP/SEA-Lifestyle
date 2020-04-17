@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MealGridViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
+    
+    var foodData = [[String:Any]]()
+    var fullFoodData = [[String:Any]]()
+    var filteredData = [String]()
+    var data = [String]()
+    var baseUrlImage: String!
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
@@ -29,7 +36,10 @@ class MealGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         layout.itemSize = CGSize(width: width, height: width * 3 / 4)
         
         searchBar.delegate = self
-       
+        
+        loadFoodData()
+
+
     }
     
     
@@ -41,6 +51,27 @@ class MealGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         view.endEditing(true)
     }
     
+    func loadFoodData(){
+        let url = URL(string: "https://api.spoonacular.com/recipes/search?apiKey=a5adb8848cf447679fcce3994122a14f&number=1000")!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+           // This will run when the network request returns
+           if let error = error {
+              print(error.localizedDescription)
+           } else if let data = data {
+              let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+            self.foodData = dataDictionary["results"] as! [[String:Any]]
+            self.fullFoodData = dataDictionary["results"] as! [[String:Any]]
+            self.baseUrlImage = dataDictionary["baseUri"] as! String
+            for recipe in self.foodData{
+                self.data.append(recipe["title"] as! String)
+            }
+           }
+            self.collectionView.reloadData()
+        }
+        task.resume()
+    }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         UIView.animate(withDuration: 0.2, animations: {
@@ -74,25 +105,57 @@ class MealGridViewController: UIViewController, UICollectionViewDelegate, UIColl
             self.greetingLabel.alpha = 1
         })
     }
-           
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return self.foodData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MealGridCell", for: indexPath) as! MealGridCell
-        
+        let food = foodData[indexPath.row]
+        let foodURL = food["image"] as! String
+        let urlString = baseUrlImage + foodURL
+        let url = URL(string: urlString)
+        if (url != nil){
+        cell.mealPicture.af_setImage(withURL: url!)
+}
         return cell
     }
     
-    /*
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // When there is no text, filteredData is the same as the original data
+        // When user has entered text into the search box
+        // Use the filter method to iterate over all items in the data array
+        // For each item, return true if the item should be included and false if the
+        // item should NOT be included
+        filteredData = searchText.isEmpty ? data : data.filter { (item:String) -> Bool in
+            // If dataItem matches the searchText, return true to include it
+            return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        }
+        var dummy_array = [[String:Any]]()
+        for element in self.fullFoodData{
+            let foodType = element["title"] as! String
+            if filteredData.contains(foodType){
+                dummy_array.append(element)
+            }
+        }
+        self.foodData = dummy_array
+        
+        collectionView.reloadData()
+    }
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let food = foodData[indexPath.row]
+        
+        let ingredientsViewController = segue.destination as! IngredientsViewController
+        ingredientsViewController.food = food
+        ingredientsViewController.baseUrlImage = baseUrlImage
     }
-    */
-    
+
+ 
 }

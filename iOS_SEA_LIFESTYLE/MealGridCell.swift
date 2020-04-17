@@ -10,5 +10,6 @@ import UIKit
 
 class MealGridCell: UICollectionViewCell {
     
+    
     @IBOutlet var mealPicture: UIImageView!
 }

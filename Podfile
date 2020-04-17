@@ -7,6 +7,7 @@ target 'iOS_SEA_LIFESTYLE' do
 
   # Pods for iOS_SEA_LIFESTYLE
     pod "Parse"
+    pod 'AlamofireImage'
 
   target 'iOS_SEA_LIFESTYLETests' do
     inherit! :search_paths

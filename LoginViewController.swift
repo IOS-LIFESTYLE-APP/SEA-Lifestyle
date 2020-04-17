@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var roundedCornerButton: UIButton!
+    
     override func viewDidLoad() {
         roundedCornerButton.layer.cornerRadius = 10
         roundedCornerButton.layer.borderColor = UIColor.white.cgColor
@@ -32,6 +33,11 @@ class LoginViewController: UIViewController {
         
         super.viewDidLoad()
 
+    }
+    
+    
+    @IBAction func onTaps(_ sender: Any) {
+        self.view.endEditing(true)
     }
     
     @IBAction func onSignIn(_ sender: Any) {

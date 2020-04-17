@@ -77,6 +77,11 @@ class SignUpViewController: UIViewController {
        
     }
     
+    
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

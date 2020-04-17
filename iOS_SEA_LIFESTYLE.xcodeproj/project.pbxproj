@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3471ED501417012A0BD46B94 /* Pods_iOS_SEA_LIFESTYLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCFC9617183BA2279CEA4C1 /* Pods_iOS_SEA_LIFESTYLE.framework */; };
 		3A1065876ED9C57572C6102D /* Pods_iOS_SEA_LIFESTYLETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568279997BC4DB2BDD0488E2 /* Pods_iOS_SEA_LIFESTYLETests.framework */; };
+		3B0618F8244A0C3D00A721C6 /* NutritionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0618F7244A0C3D00A721C6 /* NutritionCell.swift */; };
 		3B365730243F7E1000AB3BB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B36572F243F7E1000AB3BB3 /* LoginViewController.swift */; };
 		3B365732243F8D8300AB3BB3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B365731243F8D8300AB3BB3 /* SignUpViewController.swift */; };
 		3B365734243F92A200AB3BB3 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B365733243F92A200AB3BB3 /* NutritionViewController.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		09A7C8964727CA46AA087C03 /* Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests/Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		25DCFB3A44C88B6D2F842A70 /* Pods-iOS_SEA_LIFESTYLE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_SEA_LIFESTYLE.release.xcconfig"; path = "Target Support Files/Pods-iOS_SEA_LIFESTYLE/Pods-iOS_SEA_LIFESTYLE.release.xcconfig"; sourceTree = "<group>"; };
+		3B0618F7244A0C3D00A721C6 /* NutritionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionCell.swift; sourceTree = "<group>"; };
 		3B36572F243F7E1000AB3BB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		3B365731243F8D8300AB3BB3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3B365733243F92A200AB3BB3 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				3B7D65E3243EE38C0060F939 /* AppDelegate.swift */,
 				3B7D65E5243EE38C0060F939 /* SceneDelegate.swift */,
 				3B7D65E9243EE38C0060F939 /* Main.storyboard */,
+				3B0618F7244A0C3D00A721C6 /* NutritionCell.swift */,
 				3B365733243F92A200AB3BB3 /* NutritionViewController.swift */,
 				3B365735243F92BE00AB3BB3 /* CookViewController.swift */,
 				3B7D65EC243EE38D0060F939 /* Assets.xcassets */,
@@ -445,6 +448,7 @@
 				3B7D65E4243EE38C0060F939 /* AppDelegate.swift in Sources */,
 				3B365738243F97A500AB3BB3 /* IngredientsViewController.swift in Sources */,
 				837DA3F1244986E20035CA2A /* IngredientsCell.swift in Sources */,
+				3B0618F8244A0C3D00A721C6 /* NutritionCell.swift in Sources */,
 				3B365730243F7E1000AB3BB3 /* LoginViewController.swift in Sources */,
 				3B365736243F92BE00AB3BB3 /* CookViewController.swift in Sources */,
 				83BB61BE243F0E6300768062 /* MealGridViewController.swift in Sources */,

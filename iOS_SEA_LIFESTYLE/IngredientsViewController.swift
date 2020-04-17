@@ -20,6 +20,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var circularImage: UIImageView!
     
+   
     
     override func viewDidLoad() {
         circularImage.layer.masksToBounds = true
@@ -92,6 +93,17 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         let nutritionViewController = segue.destination as! NutritionViewController
+         nutritionViewController.food = food
+         nutritionViewController.baseUrlImage = baseUrlImage
+     }
+    
+    
+    
+    
 
+    
+    
 }
 

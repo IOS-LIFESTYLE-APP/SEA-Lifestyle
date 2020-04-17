@@ -13,14 +13,14 @@ class SignUpViewController: UIViewController {
 
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var emailAddress: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var signUp: UIButton!
     
     
     @IBAction func onSignUp(_ sender: Any) {
         let user = PFUser()
-        user.username = firstName.text! + " " + lastName.text!
+        user.username = usernameField.text!
         user.password = password.text
 //      user.email = "email@example.com"
         
@@ -28,9 +28,10 @@ class SignUpViewController: UIViewController {
             if success {
                 self.firstName.text?.removeAll()
                 self.lastName.text?.removeAll()
-                self.emailAddress.text?.removeAll()
+                self.usernameField.text?.removeAll()
                 self.password.text?.removeAll()
             } else {
+                
                 print("Error \(error?.localizedDescription)")
             }
         }
@@ -54,11 +55,11 @@ class SignUpViewController: UIViewController {
         lastName.layer.borderColor = UIColor.white.cgColor
         lastName.borderStyle = UITextField.BorderStyle.roundedRect
         
-        emailAddress.layer.cornerRadius = 10
-        emailAddress.layer.borderWidth = 1.0
-        emailAddress.layer.masksToBounds = true
-        emailAddress.layer.borderColor = UIColor.white.cgColor
-        emailAddress.borderStyle = UITextField.BorderStyle.roundedRect
+        usernameField.layer.cornerRadius = 10
+        usernameField.layer.borderWidth = 1.0
+        usernameField.layer.masksToBounds = true
+        usernameField.layer.borderColor = UIColor.white.cgColor
+        usernameField.borderStyle = UITextField.BorderStyle.roundedRect
         
         password.layer.cornerRadius = 10
         password.layer.borderWidth = 1.0

@@ -32,10 +32,9 @@
                                 </state>
                                 <connections>
                                     <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsl-nE-s3m"/>
-                                    <segue destination="zkQ-yB-ics" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="0js-jL-Vt1"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrR-XT-rwb">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrR-XT-rwb">
                                 <rect key="frame" x="36" y="453" width="342" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,6 +77,7 @@
                         <outlet property="passwordTextField" destination="pLI-In-xaf" id="uJS-px-f0Y"/>
                         <outlet property="roundedCornerButton" destination="aQ7-Vo-J0n" id="zPz-tP-rI1"/>
                         <outlet property="usernameTextField" destination="xrR-XT-rwb" id="RYk-uj-IMF"/>
+                        <segue destination="zkQ-yB-ics" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="qzg-Bd-CkF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -104,7 +104,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mW2-Oo-ULx">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mW2-Oo-ULx">
                                 <rect key="frame" x="27" y="453" width="361" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.78054136039999999" green="0.77999991179999995" blue="0.8000032306" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -167,11 +167,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="F8k-IO-Ylv"/>
                     <connections>
-                        <outlet property="emailAddress" destination="mW2-Oo-ULx" id="ky5-EK-Cr6"/>
                         <outlet property="firstName" destination="JR1-OX-RBj" id="VjZ-0N-TXp"/>
                         <outlet property="lastName" destination="31r-cK-Zyy" id="JMi-o1-V6X"/>
                         <outlet property="password" destination="Led-Vi-AFF" id="jvS-B7-ZkV"/>
                         <outlet property="signUp" destination="GEN-Ff-R5d" id="k58-YH-yro"/>
+                        <outlet property="usernameField" destination="mW2-Oo-ULx" id="87g-CI-LVn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9S-QP-eeb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -275,7 +275,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jY-FQ-T4x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="190"/>
+            <point key="canvasLocation" x="138" y="128"/>
         </scene>
         <!--Meal Grid View Controller-->
         <scene sceneID="UPs-TM-hnD">

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignUpViewController: UIViewController {
 
@@ -16,12 +17,26 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var signUp: UIButton!
     
- 
     
-    
-    
-    
-    
+    @IBAction func onSignUp(_ sender: Any) {
+        let user = PFUser()
+        user.username = firstName.text! + " " + lastName.text!
+        user.password = password.text
+//      user.email = "email@example.com"
+        
+        user.signUpInBackground { (success, error) in
+            if success {
+                self.firstName.text?.removeAll()
+                self.lastName.text?.removeAll()
+                self.emailAddress.text?.removeAll()
+                self.password.text?.removeAll()
+            } else {
+                print("Error \(error?.localizedDescription)")
+            }
+        }
+       
+
+    }
     
     override func viewDidLoad() {
         
@@ -52,7 +67,7 @@ class SignUpViewController: UIViewController {
         password.borderStyle = UITextField.BorderStyle.roundedRect
         
         
-        
+    
         
       
         super.viewDidLoad()

@@ -31,7 +31,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zkQ-yB-ics" kind="presentation" modalPresentationStyle="fullScreen" id="0js-jL-Vt1"/>
+                                    <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsl-nE-s3m"/>
+                                    <segue destination="zkQ-yB-ics" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="0js-jL-Vt1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrR-XT-rwb">
@@ -52,7 +53,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="a8e-2V-RHO" kind="presentation" modalPresentationStyle="fullScreen" id="3w6-Vk-W2R"/>
+                                    <segue destination="a8e-2V-RHO" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="3w6-Vk-W2R"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xj-W2-MOp">
@@ -74,9 +75,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="xrR-XT-rwb" id="YMA-Lh-Jwr"/>
                         <outlet property="passwordTextField" destination="pLI-In-xaf" id="uJS-px-f0Y"/>
                         <outlet property="roundedCornerButton" destination="aQ7-Vo-J0n" id="zPz-tP-rI1"/>
+                        <outlet property="usernameTextField" destination="xrR-XT-rwb" id="RYk-uj-IMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,6 +126,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.92217534779999999" green="0.9679765105" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignUp:" destination="a8e-2V-RHO" eventType="touchUpInside" id="Eij-cO-Hm3"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31r-cK-Zyy">
                                 <rect key="frame" x="27" y="382" width="361" height="37"/>

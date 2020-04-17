@@ -1,0 +1,6 @@
+framework module Pods_iOS_SEA_LIFESTYLE {
+  umbrella header "Pods-iOS_SEA_LIFESTYLE-umbrella.h"
+
+  export *
+  module * { export * }
+}

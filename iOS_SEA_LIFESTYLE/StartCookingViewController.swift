@@ -31,6 +31,12 @@ class StartCookingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
+        let url = URL(string: "https://api.spoonacular.com/recipes/search&apiKey=a5adb8848cf447679fcce3994122a14f")!
+        
+        print(intructions)
+        
+        
 
         // Do any additional setup after loading the view.
     }

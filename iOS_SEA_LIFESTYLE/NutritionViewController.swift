@@ -8,27 +8,104 @@
 
 import UIKit
 
-class NutritionViewController: UIViewController {
+class NutritionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+   
+    var food: [String:Any]!
+    var baseUrlImage: String!
     
+    var nutritionData = [[String:Any]]()
     
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nutrientData()
+        tableView.dataSource = self
+        tableView.delegate = self
+   
     }
+    
+
+    func nutrientData(){
+        let foodID = food["id"] as! Int
+        let FoodID = String(foodID)
+        let url = URL(string: "https://api.spoonacular.com/recipes/" + FoodID + "/nutritionWidget.json?apiKey=a5adb8848cf447679fcce3994122a14f")!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+                     // This will run when the network request returns
+        if let error = error {
+                print(error.localizedDescription)
+        } else if let data = data {
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+            self.nutritionData = dataDictionary["good"] as! [[String : Any]]
+            print(self.nutritionData)
+            self.tableView.reloadData()
+            }
+
+            }
+                  task.resume()
+        }
+        
+
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return nutritionData.count
+    }
+       
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "nutritionCell", for: indexPath) as! NutritionCell
+        let nutritionFacts = nutritionData[indexPath.row]
+        cell.nutrition_label.text = nutritionFacts["title"] as? String
+        cell.percentLabel.text = nutritionFacts["percentOfDailyNeeds"] as? String
+        cell.amountLabel.text = nutritionFacts["amount"] as? String
+        return cell
+    }
+       
+    
     
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
+    
 
 }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

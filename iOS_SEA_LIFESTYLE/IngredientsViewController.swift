@@ -99,16 +99,12 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is NutritionViewController{
          let nutritionViewController = segue.destination as! NutritionViewController
          nutritionViewController.food = food
-         nutritionViewController.baseUrlImage = baseUrlImage
-     }
-  
-    
-    
-    
-    
-
+            nutritionViewController.baseUrlImage = baseUrlImage}
+        }
+     
     
     
 }

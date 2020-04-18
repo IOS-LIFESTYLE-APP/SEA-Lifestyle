@@ -26,19 +26,18 @@ SEA Lifestyle tackles issues of overeating, and obesity by helping the user main
 
 **Required Must-have Stories**
 
-- [ ] User can register for an account
-- [ ] User can log in 
+- [x] User can register for an account
+- [x] User can log in 
 - [x] User can view SEA Lifestyle Logo
 - [x] User can view app description
 - [ ] User can view a table of previously searched meals
-- [ ] User can see a variety of healthy food options
-- [ ] User can search foods
+- [x] User can see a variety of healthy food options
+- [x] User can search foods
 - [x] User can click sign up button
-- [ ] User can type in a brand name
 - [x] User can click nutritional facts button
-- [ ] User can view nutritional facts about a food type
-- [ ] User can view food ingredients
-- [ ] User can view the image of the food they searched for
+- [x] User can view nutritional facts about a food type
+- [x] User can view food ingredients
+- [x] User can view the image of the food they searched for
 - [x] User can click search results images
 - [ ] User can view number of people who searched for a meal by accessing previous searches
 - [x] User can hit "previous searches" button to see previously searched foods
@@ -229,6 +228,5 @@ task.resume()
 
 Here's a walkthrough of implemented user stories:
 
-<img src="http://g.recordit.co/jaaESKKQhT.gif" title='Video Walkthrough' width='' alt='Video Walkthrough'/>
-
+<img src="http://g.recordit.co/HBpG8UZPdS.gif" title='Video Walkthrough' width='' alt='Video Walkthrough'/>
 

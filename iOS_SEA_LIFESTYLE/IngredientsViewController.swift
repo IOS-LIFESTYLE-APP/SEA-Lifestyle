@@ -103,6 +103,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
          nutritionViewController.food = food
          nutritionViewController.baseUrlImage = baseUrlImage
      }
+  
     
     
     

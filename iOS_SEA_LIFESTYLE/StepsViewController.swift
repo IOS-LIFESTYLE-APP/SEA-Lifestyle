@@ -1,33 +1,37 @@
 //
-//  StartCookingViewController.swift
+//  StepsViewController.swift
 //  iOS_SEA_LIFESTYLE
 //
-//  Created by Ayo  on 4/10/20.
+//  Created by user168008 on 4/17/20.
 //  Copyright © 2020 Ayo . All rights reserved.
 //
-
+import Foundation
 import UIKit
+import Combine
 
-struct ContentView : View {
+final class StepsViewController: BindableObject {
     
-   @state var model = PostListViewModel()
+    init() {
+        fetchPosts()
+        
+    }
     
- 
-    var body: some View{
-        List(model.posts) { post in
-            Text(post.title)
+    var posts = [Post]() {
+        didSet {
+            didChange.send(self)
+        }
+    }
+    
+    private func fetchPost() {
+        Webservice().getAllPosts{
+            self.posts = $0
     }
 }
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+
+    let didChange = PassthroughSubject<PostListViewModel,Never>()
+    
 }
-#endif
-class StartCookingViewController: UIViewController {
-    
-    
+class StepsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +39,7 @@ class StartCookingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func backButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+
     /*
     // MARK: - Navigation
 

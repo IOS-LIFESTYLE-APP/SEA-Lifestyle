@@ -22,6 +22,7 @@
 		3B7D65F0243EE38D0060F939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7D65EE243EE38D0060F939 /* LaunchScreen.storyboard */; };
 		3B7D65FB243EE38E0060F939 /* iOS_SEA_LIFESTYLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D65FA243EE38E0060F939 /* iOS_SEA_LIFESTYLETests.swift */; };
 		3B7D6606243EE38E0060F939 /* iOS_SEA_LIFESTYLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D6605243EE38E0060F939 /* iOS_SEA_LIFESTYLEUITests.swift */; };
+		673238B3244A77F9003087D5 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673238B2244A77F9003087D5 /* StepsViewController.swift */; };
 		837DA3F1244986E20035CA2A /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA3F0244986E20035CA2A /* IngredientsCell.swift */; };
 		83BB61B8243EF6FD00768062 /* PopularMealsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB61B7243EF6FD00768062 /* PopularMealsCell.swift */; };
 		83BB61BA243EFA4700768062 /* PopularMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB61B9243EFA4700768062 /* PopularMealsViewController.swift */; };
@@ -71,6 +72,7 @@
 		3B7D6607243EE38E0060F939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D28DA94938C4A54ECE61781 /* Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests.release.xcconfig"; path = "Target Support Files/Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests/Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests.release.xcconfig"; sourceTree = "<group>"; };
 		568279997BC4DB2BDD0488E2 /* Pods_iOS_SEA_LIFESTYLETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_SEA_LIFESTYLETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		673238B2244A77F9003087D5 /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 		7DCFC9617183BA2279CEA4C1 /* Pods_iOS_SEA_LIFESTYLE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_SEA_LIFESTYLE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		837DA3F0244986E20035CA2A /* IngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCell.swift; sourceTree = "<group>"; };
 		83BB61B7243EF6FD00768062 /* PopularMealsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMealsCell.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				3B365737243F97A500AB3BB3 /* IngredientsViewController.swift */,
 				3B365731243F8D8300AB3BB3 /* SignUpViewController.swift */,
 				3B36572F243F7E1000AB3BB3 /* LoginViewController.swift */,
+				673238B2244A77F9003087D5 /* StepsViewController.swift */,
 			);
 			path = iOS_SEA_LIFESTYLE;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				837DA3F1244986E20035CA2A /* IngredientsCell.swift in Sources */,
 				3B365730243F7E1000AB3BB3 /* LoginViewController.swift in Sources */,
 				3B365736243F92BE00AB3BB3 /* CookViewController.swift in Sources */,
+				673238B3244A77F9003087D5 /* StepsViewController.swift in Sources */,
 				83BB61BE243F0E6300768062 /* MealGridViewController.swift in Sources */,
 				83BB61B8243EF6FD00768062 /* PopularMealsCell.swift in Sources */,
 				3B7D65E6243EE38C0060F939 /* SceneDelegate.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class NutritionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
    
@@ -16,15 +17,21 @@ class NutritionViewController: UIViewController, UITableViewDataSource, UITableV
     var nutritionData = [[String:Any]]()
     
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var foodImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        foodImage.layer.masksToBounds = true
+        foodImage.layer.cornerRadius = foodImage.bounds.width / 2
+        foodImage.layer.borderWidth = 5
+        foodImage.layer.borderColor = UIColor.purple.cgColor
         nutrientData()
+        
+            
         tableView.dataSource = self
         tableView.delegate = self
    
     }
-    
+
 
     func nutrientData(){
         let foodID = food["id"] as! Int
@@ -57,8 +64,14 @@ class NutritionViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "nutritionCell", for: indexPath) as! NutritionCell
         let nutritionFacts = nutritionData[indexPath.row]
         cell.nutrition_label.text = nutritionFacts["title"] as? String
-        cell.percentLabel.text = nutritionFacts["percentOfDailyNeeds"] as? String
         cell.amountLabel.text = nutritionFacts["amount"] as? String
+        
+        let foodURL = food["image"] as! String
+        let urlString = baseUrlImage + foodURL
+        let url = URL(string: urlString)
+        if (url != nil){
+        foodImage.af_setImage(withURL: url!)
+        }
         return cell
     }
        

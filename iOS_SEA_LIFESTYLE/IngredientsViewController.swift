@@ -11,6 +11,7 @@ import AlamofireImage
 
 class IngredientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+  
     var food: [String:Any]!
     var baseUrlImage: String!
     
@@ -25,7 +26,9 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         circularImage.layer.masksToBounds = true
         circularImage.layer.cornerRadius = circularImage.bounds.width / 2
-        
+        circularImage.layer.borderWidth = 5
+        circularImage.layer.borderColor = UIColor.cyan.cgColor
+     
         foodName.text = food["title"] as? String
         
         let foodURL = food["image"] as! String
@@ -77,9 +80,11 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         cell.ingredientLabel.text = ingredient["name"] as? String
         let ingredientURL = ingredient["image"] as! String
         let urlString = "https://spoonacular.com/cdn/ingredients_100x100/" + ingredientURL
+  
         let url = URL(string: urlString)
         if (url != nil){
                 cell.ingredientsImage.af_setImage(withURL: url!)
+
         }
         return cell
     }

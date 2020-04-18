@@ -12,6 +12,8 @@ class IngredientsCell: UITableViewCell {
 
     @IBOutlet var ingredientLabel: UILabel!
     @IBOutlet var ingredientsImage: UIImageView!
+    
+       
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

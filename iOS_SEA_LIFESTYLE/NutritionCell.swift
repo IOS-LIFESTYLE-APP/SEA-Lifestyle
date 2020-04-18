@@ -10,7 +10,10 @@ import UIKit
 
 class NutritionCell: UITableViewCell {
 
+    
+    
     @IBOutlet weak var nutrition_label: UILabel!
+ 
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     override func awakeFromNib() {

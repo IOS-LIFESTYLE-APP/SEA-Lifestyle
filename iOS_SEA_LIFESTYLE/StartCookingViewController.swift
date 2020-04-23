@@ -9,42 +9,67 @@
 //import UIKit
 //
 //struct ContentView : View {
-//    
-//   @state var model = PostListViewModel()
-//    
-// 
-//    var body: some View{
-//        List(model.posts) { post in
-//            Text(post.title)
-//    }
-//}
-//    
-//       override func viewDidLoad() {
-//           super.viewDidLoad()
-//    
-//           let url = URL(string: "https://api.spoonacular.com/recipes/search&apiKey=a5adb8848cf447679fcce3994122a14f")!
-//           
-//           print(intructions)
-//           
-//           
-//
-//           // Do any additional setup after loading the view.
-//        
-//    }
-//#if DEBUG
-//struct ContentView_Previews : PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
-//#endif
-//class StartCookingViewController: UIViewController {
-//    
-//    
-//        
-//
+   
+
+   
+       override func viewDidLoad() {
+          super.viewDidLoad()
+   
+//          let url = URL(string:  "https://api.spoonacular.com/recipes/search&apiKey=a5adb8848cf447679fcce3994122a14f")!
+
+class StartCookingViewController: UIViewController {
+    
+    GET https://api.spoonacular.com/recipes/random?number=1&tags=vegetarian
+    
+    {
+        "recipes":[
+            {/* recipe data as in Get Recipe Information endpoint */}
+        ]
+    }
+    
+        func loadRecipeData(){
+            let foodID = food["id"] as! Int
+            let FoodID = String(foodID)
+            let url = URL(string: "https://api.spoonacular.com/recipes/" + FoodID + "/recipeWidget.json?apiKey=a5adb8848cf447679fcce3994122a14f")!
+            let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+            let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+            let task = session.dataTask(with: request) { (data, response, error) in
+                
+               
+               if let error = error {
+                  print(error.localizedDescription)
+               } else if let data = data {
+                  let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                self.foodData = dataDictionary["recipe"] as! [[String:Any]]
+                self.tableView.reloadData()
+               }
+                
+            }
+            task.resume()
+        }
+        
+         }
+           
+       func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+           self.foodData.count
+       }
+       
+       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+           let cell = tableView.dequeueReusableCell(withIdentifier: "CookViewController", for: indexPath) as! IngredientsCell
+           let ingredient = foodData[indexPath.row]
+           cell.ingredientLabel.text = ingredient["name"] as? String
+           let ingredientURL = ingredient["image"] as! String
+           let urlString = "https://spoonacular.com/cdn/recipes_100x100/" + ingredientURL
+     
+           let url = URL(string: urlString)
+           if (url != nil){
+                   cell.ingredientsImage.af_setImage(withURL: url!)
+
+           }
+           return cell
+       }
 //        // Do any additional setup after loading the view.
-//    }
+    }
 //    
 //    @IBAction func backButton(_ sender: Any) {
 //        self.dismiss(animated: true, completion: nil)

@@ -22,7 +22,6 @@
 		3B7D65F0243EE38D0060F939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7D65EE243EE38D0060F939 /* LaunchScreen.storyboard */; };
 		3B7D65FB243EE38E0060F939 /* iOS_SEA_LIFESTYLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D65FA243EE38E0060F939 /* iOS_SEA_LIFESTYLETests.swift */; };
 		3B7D6606243EE38E0060F939 /* iOS_SEA_LIFESTYLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D6605243EE38E0060F939 /* iOS_SEA_LIFESTYLEUITests.swift */; };
-		3BDDE0A0244FF5270002F346 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDE09F244FF5270002F346 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		3BDDE0A224514D270002F346 /* CookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDE0A124514D270002F346 /* CookTableViewCell.swift */; };
 		837DA3F1244986E20035CA2A /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837DA3F0244986E20035CA2A /* IngredientsCell.swift */; };
 		83BB61B8243EF6FD00768062 /* PopularMealsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB61B7243EF6FD00768062 /* PopularMealsCell.swift */; };
@@ -71,7 +70,6 @@
 		3B7D6601243EE38E0060F939 /* iOS_SEA_LIFESTYLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_SEA_LIFESTYLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7D6605243EE38E0060F939 /* iOS_SEA_LIFESTYLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_SEA_LIFESTYLEUITests.swift; sourceTree = "<group>"; };
 		3B7D6607243EE38E0060F939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BDDE09F244FF5270002F346 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGImagePropertyOrientation+UIImageOrientation.swift"; path = "../../CoreML/LICENSE/CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		3BDDE0A124514D270002F346 /* CookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTableViewCell.swift; sourceTree = "<group>"; };
 		3D28DA94938C4A54ECE61781 /* Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests.release.xcconfig"; path = "Target Support Files/Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests/Pods-iOS_SEA_LIFESTYLE-iOS_SEA_LIFESTYLEUITests.release.xcconfig"; sourceTree = "<group>"; };
 		568279997BC4DB2BDD0488E2 /* Pods_iOS_SEA_LIFESTYLETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_SEA_LIFESTYLETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				3B7D65E3243EE38C0060F939 /* AppDelegate.swift */,
-				3BDDE09F244FF5270002F346 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
 				3B7D65E5243EE38C0060F939 /* SceneDelegate.swift */,
 				3B7D65E9243EE38C0060F939 /* Main.storyboard */,
 				3BDDE0A124514D270002F346 /* CookTableViewCell.swift */,
@@ -447,7 +444,6 @@
 				83BB61BC243F0BDB00768062 /* MealGridCell.swift in Sources */,
 				3B365732243F8D8300AB3BB3 /* SignUpViewController.swift in Sources */,
 				3B365734243F92A200AB3BB3 /* NutritionViewController.swift in Sources */,
-				3BDDE0A0244FF5270002F346 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				3B7D65E4243EE38C0060F939 /* AppDelegate.swift in Sources */,
 				3B365738243F97A500AB3BB3 /* IngredientsViewController.swift in Sources */,
 				837DA3F1244986E20035CA2A /* IngredientsCell.swift in Sources */,

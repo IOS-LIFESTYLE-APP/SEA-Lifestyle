@@ -37,7 +37,7 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
 //                self.recipeData = dataDictionary["title"] as! [[String : Any]]
             print(dataDictionary)
-            print(dataDictionary["title"])
+//            print(dataDictionary["summary"])
 //                print(self.recipeData)
                 self.tableView.reloadData()
             }

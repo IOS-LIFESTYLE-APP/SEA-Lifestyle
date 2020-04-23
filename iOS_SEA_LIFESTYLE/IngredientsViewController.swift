@@ -102,8 +102,19 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         if segue.destination is NutritionViewController{
          let nutritionViewController = segue.destination as! NutritionViewController
          nutritionViewController.food = food
-            nutritionViewController.baseUrlImage = baseUrlImage}
+            nutritionViewController.baseUrlImage = baseUrlImage
+            
+        } else if segue.destination is CookViewController{
+            let cookViewController = segue.destination as! CookViewController
+            cookViewController.food = food
+ 
+
         }
+//
+//
+        
+        }
+    
      
     
     

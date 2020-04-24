@@ -701,7 +701,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="UDQ-O8-m3K"/>
                                 </constraints>
-                                <state key="normal" image="1608950-512"/>
+                                <state key="normal" image="unlike"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="MMf-Ci-fFB" eventType="touchUpInside" id="4gL-jw-a8i"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like the meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="224-JC-bCt">
                                 <rect key="frame" x="156" y="805" width="102" height="21"/>
@@ -712,29 +715,32 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VfH-dN-rCE">
                                 <rect key="frame" x="20" y="209" width="374" height="558"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.85814102820000004" green="0.88248232260000004" blue="0.95392745729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cookCell" rowHeight="112" id="zin-MR-c5U" customClass="CookTableViewCell" customModule="iOS_SEA_LIFESTYLE" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="112"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cookCell" rowHeight="154" id="zin-MR-c5U" customClass="CookTableViewCell" customModule="iOS_SEA_LIFESTYLE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="154"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zin-MR-c5U" id="aE9-i2-0Um">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="112"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rex-oR-ZUy">
-                                                    <rect key="frame" x="20" y="39" width="44" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rex-oR-ZUy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="154"/>
+                                                    <color key="backgroundColor" red="0.85814102820000004" green="0.88248232260000004" blue="0.95392745729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rex-oR-ZUy" firstAttribute="top" secondItem="aE9-i2-0Um" secondAttribute="topMargin" constant="28" id="J1I-DY-oZ2"/>
-                                                <constraint firstItem="rex-oR-ZUy" firstAttribute="leading" secondItem="aE9-i2-0Um" secondAttribute="leadingMargin" id="VVV-Zs-gAw"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rex-oR-ZUy" secondAttribute="trailing" constant="20" symbolic="YES" id="azv-BA-kaW"/>
+                                                <constraint firstItem="rex-oR-ZUy" firstAttribute="leading" secondItem="aE9-i2-0Um" secondAttribute="leadingMargin" constant="-20" id="5WC-5D-Z9Q"/>
+                                                <constraint firstItem="rex-oR-ZUy" firstAttribute="top" secondItem="aE9-i2-0Um" secondAttribute="topMargin" constant="-11" id="drc-Ea-kKp"/>
+                                                <constraint firstItem="rex-oR-ZUy" firstAttribute="centerY" secondItem="aE9-i2-0Um" secondAttribute="centerY" id="pBw-my-fjO"/>
+                                                <constraint firstItem="rex-oR-ZUy" firstAttribute="centerX" secondItem="aE9-i2-0Um" secondAttribute="centerX" id="z5V-gr-Nlx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="recipeLabel" destination="rex-oR-ZUy" id="x03-xZ-lhR"/>
+                                            <outlet property="recipeLabel" destination="rex-oR-ZUy" id="8nt-dS-FcX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -765,6 +771,7 @@
                         <viewLayoutGuide key="safeArea" id="uQd-aK-lT6"/>
                     </view>
                     <connections>
+                        <outlet property="likeButton" destination="5HK-Kd-dPL" id="5OF-kJ-kQ8"/>
                         <outlet property="tableView" destination="VfH-dN-rCE" id="cT4-M8-xJj"/>
                     </connections>
                 </viewController>
@@ -812,7 +819,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1608950-512" width="512" height="512"/>
         <image name="Ellipse 1" width="379" height="364"/>
         <image name="WELCOME" width="70.5" height="12.5"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
@@ -822,5 +828,6 @@
         <image name="icons8-star-50 (1)" width="50" height="50"/>
         <image name="tacos 1" width="198" height="149"/>
         <image name="tacos 1 (2)" width="207" height="162"/>
+        <image name="unlike" width="512" height="512"/>
     </resources>
 </document>

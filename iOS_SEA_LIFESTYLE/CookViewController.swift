@@ -7,26 +7,48 @@
 //
 
 import UIKit
+import Parse
 
 class CookViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var food: [String:Any]!
+
+    
     @IBOutlet weak var tableView: UITableView!
 
-    var food: [String:Any]!
+    @IBAction func buttonPressed(_ sender: Any) {
+          likeButton.setImage(UIImage(named:"like_icon"), for: UIControl.State.normal)
+    }
+    
+    @IBOutlet weak var likeButton: UIButton!
+    
+   
     var recipeData = [[String:Any]]()
+    
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
+        
+// How to Query Parse database
+//        let query = PFQuery(className:" ")
+//        query.includeKeys([""])
+//        query.limit = 20
+//        query.findObjectsInBackground { (likes, error) in
+//        if likes != nil {
+//            self.likes = likes!
+//            self.tableView.reloadData()
+//            }
+//        }
 
         super.viewDidLoad()
         cookingData()
 
         // Do any additional setup after loading the view.
     }
-//    https://api.spoonacular.com/recipes/324694/analyzedInstructions
+    
     func cookingData(){
            let foodID = food["id"] as! Int
            let FoodID = String(foodID)
-           let url = URL(string: "https://api.spoonacular.com/recipes/" + FoodID + "/summary?apiKey=a5adb8848cf447679fcce3994122a14f")!
+           let url = URL(string: "https://api.spoonacular.com/recipes/" + FoodID + "/analyzedInstructions?apiKey=a5adb8848cf447679fcce3994122a14f")!
            let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
            let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
            let task = session.dataTask(with: request) { (data, response, error) in
@@ -34,14 +56,13 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let error = error {
                 print(error.localizedDescription)
             } else if let data = data {
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-//                self.recipeData = dataDictionary["title"] as! [[String : Any]]
-            print(dataDictionary["summary"] as Any)
-            let value = dataDictionary["summary"] as Any
-            print(value)
-         
-                
-//                print(self.recipeData)
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String:Any]]
+                self.recipeData = dataDictionary[0]["steps"] as! [[String : Any]]
+                print(self.recipeData)
+                self.tableView.reloadData()
+
+     
+
                 self.tableView.reloadData()
             }
 
@@ -49,13 +70,30 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
         task.resume()
     }
 
+    
+//    var liked: Bool = false
+//
+//    func setLike(_ isLiked:Bool){
+//        liked = isLiked
+//        if (liked) {
+//            likeButton.setImage(UIImage(named:"like_icon"), for: UIControl.State.normal)
+//        }
+//    }
+    
+    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return recipeData.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cookCell", for: indexPath) as! CookTableViewCell
-             return cell
+        let steps = recipeData[indexPath.row]
+        cell.recipeLabel.text = steps["step"] as? String
+        
+  
+        return cell
+        
     }
 
     @IBAction func backButton(_ sender: Any) {

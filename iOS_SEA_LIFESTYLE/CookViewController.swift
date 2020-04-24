@@ -27,6 +27,7 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         
 // How to Query Parse database
 //        let query = PFQuery(className:" ")
@@ -58,12 +59,9 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String:Any]]
                 self.recipeData = dataDictionary[0]["steps"] as! [[String : Any]]
-                print(self.recipeData)
                 self.tableView.reloadData()
 
      
-
-                self.tableView.reloadData()
             }
 
            }
@@ -84,14 +82,18 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipeData.count
+     
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cookCell", for: indexPath) as! CookTableViewCell
-        let steps = recipeData[indexPath.row]
-        cell.recipeLabel.text = steps["step"] as? String
+//        cell.layer.cornerRadius = 10
+//        cell.layer.borderColor = tableView.backgroundColor?.cgColor
         
-  
+        let steps = recipeData[indexPath.row]
+        let info = steps["step"] as? String
+        cell.recipeLabel.text = info
+        
         return cell
         
     }

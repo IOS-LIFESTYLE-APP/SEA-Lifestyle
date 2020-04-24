@@ -16,7 +16,10 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
 
     @IBAction func buttonPressed(_ sender: Any) {
-          likeButton.setImage(UIImage(named:"like_icon"), for: UIControl.State.normal)
+        likeButton.setImage(UIImage(named:"like_icon"), for: UIControl.State.normal)
+        let alert = UIAlertController(title: "Thank you!", message: "Your feedback is important to us! Feel free to continue browsing SEALifestyle.", preferredStyle: .alert)
+                           alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                           self.present(alert, animated: true)
     }
     
     @IBOutlet weak var likeButton: UIButton!
@@ -49,6 +52,7 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func cookingData(){
            let foodID = food["id"] as! Int
            let FoodID = String(foodID)
+           
            let url = URL(string: "https://api.spoonacular.com/recipes/" + FoodID + "/analyzedInstructions?apiKey=a5adb8848cf447679fcce3994122a14f")!
            let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
            let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -58,8 +62,21 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 print(error.localizedDescription)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String:Any]]
-                self.recipeData = dataDictionary[0]["steps"] as! [[String : Any]]
-                self.tableView.reloadData()
+                //Seems like there is no dataDictionary for rice Krispies
+                
+                if dataDictionary.count == 0{
+                    let alert = UIAlertController(title: "Sorry!", message: "We do not currently have data for this food item. Please check back later", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                    print(FoodID)
+                    
+                }else{
+                    self.recipeData = dataDictionary[0]["steps"] as! [[String : Any]]
+                    print(self.recipeData)
+
+                    self.tableView.reloadData()
+                    
+                }
 
      
             }

@@ -39,11 +39,11 @@ SEA Lifestyle tackles issues of overeating, and obesity by helping the user main
 - [x] User can view food ingredients
 - [x] User can view the image of the food they searched for
 - [x] User can click search results images
-- [ ] User can view number of people who searched for a meal by accessing previous searches
+- [x] User can view number of people who searched for a meal by accessing previous searches
 - [x] User can hit "previous searches" button to see previously searched foods
 - [x] User can click cook button
-- [ ] User can view steps to cook a meal
-- [ ] User can like a meal
+- [x] User can view steps to cook a meal
+- [x] User can like a meal
 - [x] User can log out
 
 **Optional Nice-to-have Stories**

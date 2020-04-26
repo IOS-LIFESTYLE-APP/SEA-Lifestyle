@@ -52,7 +52,7 @@ class MealGridViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func loadFoodData(){
-        let url = URL(string: "https://api.spoonacular.com/recipes/search?apiKey=a5adb8848cf447679fcce3994122a14f&number=1000")!
+        let url = URL(string: "https://api.spoonacular.com/recipes/search?apiKey=127eb17b57ce4adc9b64e59d0e660990&number=1000")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in

@@ -53,7 +53,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     func loadRecipeData(){
         let foodID = food["id"] as! Int
         let FoodID = String(foodID)
-        let url = URL(string: "https://api.spoonacular.com/recipes/" + FoodID + "/ingredientWidget.json?apiKey=a5adb8848cf447679fcce3994122a14f")!
+        let url = URL(string: "https://api.spoonacular.com/recipes/" + FoodID + "/ingredientWidget.json?apiKey=127eb17b57ce4adc9b64e59d0e660990")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in

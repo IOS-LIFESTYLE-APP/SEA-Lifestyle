@@ -32,21 +32,27 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         
-// How to Query Parse database
-//        let query = PFQuery(className:" ")
-//        query.includeKeys([""])
-//        query.limit = 20
-//        query.findObjectsInBackground { (likes, error) in
-//        if likes != nil {
-//            self.likes = likes!
-//            self.tableView.reloadData()
-//            }
-//        }
-
         super.viewDidLoad()
         cookingData()
 
         // Do any additional setup after loading the view.
+    }
+   
+    
+    @IBAction func likeMealButton(_ sender: Any) {
+       
+        let foodScore = PFObject(className:"Meals")
+        let foodName = food["title"] as! String
+        foodScore["foodType"] = foodName
+        foodScore.saveInBackground {
+          (success: Bool, error: Error?) in
+          if (success) {
+            print("Saved...")
+          } else {
+            print("error \(error!.localizedDescription)")
+          }
+        }
+        
     }
     
     func cookingData(){
@@ -68,11 +74,10 @@ class CookViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     let alert = UIAlertController(title: "Sorry!", message: "We do not currently have data for this food item. Please check back later", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                     self.present(alert, animated: true)
-                    print(FoodID)
+                   
                     
                 }else{
                     self.recipeData = dataDictionary[0]["steps"] as! [[String : Any]]
-                    print(self.recipeData)
 
                     self.tableView.reloadData()
                     

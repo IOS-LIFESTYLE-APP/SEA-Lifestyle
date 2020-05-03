@@ -30,7 +30,7 @@ SEA Lifestyle tackles issues of overeating, and obesity by helping the user main
 - [x] User can log in 
 - [x] User can view SEA Lifestyle Logo
 - [x] User can view app description
-- [ ] User can view a table of previously searched meals
+- [x] User can view a table of previously searched meals
 - [x] User can see a variety of healthy food options
 - [x] User can search foods
 - [x] User can click sign up button
@@ -48,7 +48,7 @@ SEA Lifestyle tackles issues of overeating, and obesity by helping the user main
 
 **Optional Nice-to-have Stories**
 
-- [ ] User can upload a picture of their meals 
+- [x] User can upload a picture of their meals 
 - [ ] User can see nutritional facts of food after uploading picture of food.
 - [ ] User can put in location to see healthy food restaurants near them.
 - [ ] User can see how many calories per food item
@@ -228,5 +228,5 @@ task.resume()
 
 Here's a walkthrough of implemented user stories:
 
-<img src="http://g.recordit.co/HBpG8UZPdS.gif" title='Video Walkthrough' width='' alt='Video Walkthrough'/>
+<img src="http://g.recordit.co/3xm6pZH7Nf.gif" title='Video Walkthrough' width='' alt='Video Walkthrough'/>
 

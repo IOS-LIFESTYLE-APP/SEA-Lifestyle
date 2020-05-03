@@ -13,7 +13,6 @@ class PopularMealsCell: UITableViewCell {
     @IBOutlet var foodName: UILabel!
     @IBOutlet var mealPicture: UIImageView!
     @IBOutlet var rating: UILabel!
-    @IBOutlet var synopsisLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
